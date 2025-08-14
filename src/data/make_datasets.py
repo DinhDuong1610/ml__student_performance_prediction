@@ -92,6 +92,7 @@ def main():
     y_train_path = os.path.join(processed_data_path, "y_train.csv")
     y_test_path = os.path.join(processed_data_path, "y_test.csv")
 
+    joblib.dump(preprocessor, preprocessor_path)
     x_train_processed.to_csv(x_train_path, index=False)
     x_test_processed.to_csv(x_test_path, index=False)
     y_train.to_csv(y_train_path, index=False)
